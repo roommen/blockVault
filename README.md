@@ -1,2 +1,2 @@
-# blockVault
-Block chain based vault built at InOut6.0
+# BlockVault
+Block chain backed multi-cloud data storage solution built at InOut6.0
