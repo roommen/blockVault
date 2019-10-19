@@ -13,8 +13,8 @@ def printBanner():
     print("\t\t\t\t\t\t\t-----------------------------------------")
 
 def uploadVault():
-    print("\n")
-    filePath = input("Enter file name (with path) :: ")
+    # print("\n")
+    filePath = input("\t\tEnter file name (with path) :: ")
     splitFile(filePath)
     print("split success")
 
@@ -22,7 +22,9 @@ def downloadVault():
     print("Download functionality")
 
 def listVault():
-    print("List Vault functionality")
+    print("\t\tListing the vault contents...")
+    cmd = "aws s3 ls s3://inouthack6 | awk '{print $4}' | rev | cut -c 3- | rev"
+    os.system(cmd)
 
 def auditTrail():
     print("Audit Trail functionality")
@@ -33,12 +35,17 @@ def exit():
 def printMenu():
     ans = True
     while ans:
+        print("\t\t***********************")
         print("\t\t1. Upload to Vault")
         print("\t\t2. Download from Vault")
         print("\t\t3. List Vault Contents")
         print("\t\t4. View Audit Trail")
         print("\t\t5. Exit")
-        ans = input("\n\t\tEnter your selection :: ")
+        print("\t\t***********************")
+        print("\n")
+        
+        ans = input("\t\tMake your selection :: ")
+
         # print("you entered", ans)
         if int(ans) == 1:
             uploadVault()
