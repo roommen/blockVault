@@ -1,7 +1,7 @@
 import os
 import datetime
 import socket
-import updateBlock
+from updateBlock import updateBlock
 fileName = ""
 
 def downloadCoreLogic(fileName):
@@ -53,7 +53,7 @@ def makeDownloadMetaData(fileName):
     s.close()
 
     print(fileName, action, ipAddress, timestamp)
-    updateBlock(action, fileName, ipAddress, timestamp)
+    updateBlock(action, fileName, ipAddress, str(timestamp))
 
 def uploadCoreLogic(filePath):
     getFileName(filePath)
@@ -110,4 +110,4 @@ def makeUploadMetaData():
     s.close()
 
     print(fileName, action, timestamp, ipAddress)
-    updateBlock(action, fileName, ipAddress, timestamp)
+    updateBlock(action, fileName, ipAddress, str(timestamp))

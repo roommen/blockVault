@@ -1,3 +1,5 @@
+from web3 import Web3
+
 def updateBlock(action, fileName, ipAddress, timestamp):
     url = "https://testnet2.matic.network"
     web3 = Web3(Web3.HTTPProvider(url))
