@@ -29,8 +29,8 @@ def listVault():
     os.system(cmd)
     input()
 
-def auditTrail():
-    print("Audit Trail functionality")
+# def auditTrail():
+#     print("Audit Trail functionality")
 
 def exit():
     print("\nGood bye!")
@@ -42,8 +42,8 @@ def printMenu():
         print("\t\t1. Upload to Vault")
         print("\t\t2. Download from Vault")
         print("\t\t3. List Vault Contents")
-        print("\t\t4. View Audit Trail")
-        print("\t\t5. Exit")
+        # print("\t\t4. View Audit Trail")
+        print("\t\t4. Exit")
         print("\t\t***********************")
         print("\n")
         
@@ -56,9 +56,9 @@ def printMenu():
             downloadVault()
         if int(ans) == 3:
             listVault()
+        # if int(ans) == 4:
+        #     auditTrail()
         if int(ans) == 4:
-            auditTrail()
-        if int(ans) == 5:
             exit()
             ans = None
 
