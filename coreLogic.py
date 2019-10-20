@@ -110,3 +110,4 @@ def makeUploadMetaData():
     s.close()
 
     print(fileName, action, timestamp, ipAddress)
+    updateBlock(action, fileName, ipAddress, timestamp)
