@@ -1,5 +1,5 @@
 import os
-from coreLogic import splitFile
+from coreLogic import uploadCoreLogic, downloadCoreLogic
 
 def clearScreen():
     cmd = "clear"
@@ -15,22 +15,25 @@ def printBanner():
 def uploadVault():
     # print("\n")
     filePath = input("\t\tEnter file name (with path) :: ")
-    splitFile(filePath)
+    uploadCoreLogic(filePath)
     print("split success")
 
 def downloadVault():
-    print("Download functionality")
+    # print("Download functionality")
+    fileName = input("\t\tEnter file name :: ")
+    downloadCoreLogic(fileName)
 
 def listVault():
     print("\t\tListing the vault contents...")
     cmd = "aws s3 ls s3://inouthack6 | awk '{print $4}' | rev | cut -c 3- | rev"
     os.system(cmd)
+    input()
 
 def auditTrail():
     print("Audit Trail functionality")
 
 def exit():
-    print("Good bye!")
+    print("\nGood bye!")
 
 def printMenu():
     ans = True
