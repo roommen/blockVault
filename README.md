@@ -3,9 +3,7 @@
 
 Dependencies:
 
-Python3 (web3.py package)
-Google Cloud SDK (configured)
-AWS CLI (configured)
+Python3 (web3.py package), Google Cloud SDK (configured), AWS CLI (configured)
 
 Instructions to run:
 
